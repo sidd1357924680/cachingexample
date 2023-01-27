@@ -9,7 +9,7 @@ public class SimpleBookRepository implements BookRepository {
     @Override
     @Cacheable("books")
     public Book getByIsbn(String isbn) {
-        System.out.println("Actual method called getByIsbn() for : "+ isbn);
+        System.out.println("Actual method called getByIsbn() for : " + isbn);
         simulateSlowService();
         return new Book(isbn, "Some book");
     }
